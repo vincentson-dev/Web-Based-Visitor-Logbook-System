@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Muli-Regular";
+  src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Muli-SemiBold";
+  src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Muli-Bold";
+  src: url("../fonts/muli/Muli-Bold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli-Regular";
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.maintext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text on smaller screens */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.regtext {
+  font-size: 4rem; /* Adjust font size for smaller screens */
+  color: maroon;
+  font-weight: 600;
+  margin-top: 6rem; /* Adjust margin for smaller screens */
+}
+
+.buttoncontainer {
+  margin-top: 1rem; /* Adjust margin for smaller screens */
+}
+
+button {
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  padding: 0 20px;
+  background: #ae3c33;
+  font-size: 1.2rem; /* Adjust font size for smaller screens */
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Muli-SemiBold";
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: #f11a09;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .regtext {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .regtext {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}

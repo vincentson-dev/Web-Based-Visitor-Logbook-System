@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+  <div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg')">
+    <div class="maintext">
+      <p class="regtext">REGISTERED SUCCESSFULLY</p>
+    </div>
+    <div class="buttoncontainer">
+      <button type="button" id="printIDButton">Print ID Number</button>
+    </div>
+  </div>
+
+  <script>
+    function generateVisitorID() {
+        // Generate a random number between 0 and 999999
+        let randomNumber = Math.floor(Math.random() * 1000000);
+        
+        // Pad the number with leading zeros if it has fewer than 6 digits
+        let paddedNumber = String(randomNumber).padStart(6, '0');
+        
+        //  add the prefix "VISITOR-ID"
+        let visitorID = 'VISITOR-ID' + paddedNumber;
+        
+        return visitorID;
+    }
+
+    // Function to handle button click
+    function handleButtonClick() {
+        let visitorID = generateVisitorID();
+        alert(visitorID);
+
+        // Redirect to home page after displaying the alert
+        window.location.href = 'index.html';
+    }
+
+    // Attach event listener to the button
+    document.getElementById('printIDButton').addEventListener('click', handleButtonClick);
+  </script>
+</body>
+</html>
